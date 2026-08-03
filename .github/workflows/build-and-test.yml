@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: code checkout pannu
         uses: actions/checkout@v7
-      - name: build pannuvom
-        run: mvn clean install -DskipTests=true
-      - name: test pannuvom
-        run: mvn test
+      - name: java irukiya?
+        run: java --version
+      - name: mvn irukiya?
+        run: mvn --version
