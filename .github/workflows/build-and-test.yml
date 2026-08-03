@@ -20,7 +20,7 @@ jobs:
       - name: mvn testing
         run: mvn test
       - name: docker image build
-        run: docker build -t simplybyte/simplybyte-backend:gta
+        run: docker build -t simplybyte/simplybyte-backend:gta .
       - name: docker login
         uses: docker/login-action@v3
         with:
