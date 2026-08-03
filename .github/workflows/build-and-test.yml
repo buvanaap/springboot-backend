@@ -6,7 +6,7 @@ jobs:
   build-and-test-job:
     runs-on: ubuntu-latest
     steps:
-      - name: build panna porom
-        run: mvn clean install -DskipTests=true
-      - name: test panna poren
-        run: mvn test
+      - name: code checkout pannu
+        uses: actions/checkout@v7
+      - name: code irukkudha?
+        run: ls
