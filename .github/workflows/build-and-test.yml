@@ -42,5 +42,5 @@ jobs:
           key: ${{secrets.AWS_EC2_KEY}}
           port: 22
           script: |
-               docker pull $DOCKER_IMAGE_NAME
+               docker pull ${{env.DOCKER_IMAGE_NAME}}
 
