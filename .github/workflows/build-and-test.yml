@@ -32,6 +32,7 @@ jobs:
       - name: docker image push
         run: docker push $DOCKER_IMAGE_NAME
   deploy-panna-porom-guys:
+    needs: build-and-test-job
     runs-on: ubuntu-latest
     steps:
       - name: server ssh
