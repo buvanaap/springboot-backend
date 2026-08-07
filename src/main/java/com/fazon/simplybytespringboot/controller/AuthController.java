@@ -27,7 +27,7 @@ public class AuthController {
     @GetMapping("/health")
     public String health() {
         log.info("Health check api has been requested");
-        return "Hello Everyone, you are watching SimplyByte Kubernetes Series. Im Healthy";
+        return "Hello Everyone, you are watching Github actions Series. Im Healthy";
     }
 
 }
