@@ -1,0 +1,9 @@
+/home/sys-admin/springboot-backend/src/main/java/com/fazon/simplybytespringboot/Entity/UserEntity.java
+/home/sys-admin/springboot-backend/src/main/java/com/fazon/simplybytespringboot/SimplyByteSpringbootApplication.java
+/home/sys-admin/springboot-backend/src/main/java/com/fazon/simplybytespringboot/config/WebConfig.java
+/home/sys-admin/springboot-backend/src/main/java/com/fazon/simplybytespringboot/controller/AuthController.java
+/home/sys-admin/springboot-backend/src/main/java/com/fazon/simplybytespringboot/controller/UserController.java
+/home/sys-admin/springboot-backend/src/main/java/com/fazon/simplybytespringboot/model/CreateUserRequest.java
+/home/sys-admin/springboot-backend/src/main/java/com/fazon/simplybytespringboot/model/LoginUserRequest.java
+/home/sys-admin/springboot-backend/src/main/java/com/fazon/simplybytespringboot/repository/UserRepository.java
+/home/sys-admin/springboot-backend/src/main/java/com/fazon/simplybytespringboot/service/UserService.java
