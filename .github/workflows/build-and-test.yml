@@ -6,6 +6,8 @@ jobs:
   build-and-test-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4   
       - name: going to build
         run: mvn clean install -DskipTests=true
       - name: testing
