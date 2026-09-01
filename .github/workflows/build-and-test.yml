@@ -15,7 +15,7 @@ jobs:
       - name: mvn testing
         run: mvn test
       - name: docker image build
-        run: docker build -t buvanaa/springboot-backend:gta
+        run: docker build -t buvanaa/springboot-backend:gta .
       - name: Login to Docker Hub
         uses: docker/login-action@v4
         with:
