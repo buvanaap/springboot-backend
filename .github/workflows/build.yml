@@ -10,4 +10,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Show files
-        uses: ls -la
+        runs: ls -la
