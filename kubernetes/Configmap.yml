@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: 
+  name: pet-clinic-configmap
+data:
+  MYSQL_URL: jdbc:mysql://mysql-service:3306/petclinic 
+  SERVER_PORT: "8081"
+  
