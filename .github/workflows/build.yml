@@ -47,5 +47,8 @@ jobs:
           name: spring-petclinic-jar
       - name: Check files
         run: ls -la
+        path: target
+      - name: Check files
+        run: ls -la target
       - name: Build Docker Image
         run: docker build -t spring-petclinic:latest .
