@@ -61,4 +61,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build Docker Image
         run: docker build -t $IMAGE_NAME:$IMAGE_TAG .
+      - name: Test Condition
+        if: ${{ true }}
+        run: echo "Condition is True"
         
