@@ -57,4 +57,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build Docker Image
         run: docker build -t spring-petclinic:latest .
+      - name: Show Enviromental Variables
+        env:
+          IMAGE_NAME: buvanaa/spring-petclinic
+          IMAGE_TAG: 3.0
+        run:
+          echo "Image name: $IMAGE_NAME"
+          echo "Image tag: $IMAGE_TAG"
 
