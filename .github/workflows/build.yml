@@ -61,7 +61,7 @@ jobs:
         env:
           IMAGE_NAME: buvanaa/spring-petclinic
           IMAGE_TAG: 3.0
-        run:
+        run:  |
           echo "Image name: $IMAGE_NAME"
           echo "Image tag: $IMAGE_TAG"
 
