@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - main
+env:
+  IMAGE_NAME: buvanaa/spring-petclinic
+  IMAGE_TAG: 3.0
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -56,12 +60,5 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build Docker Image
-        run: docker build -t spring-petclinic:latest .
-      - name: Show Enviromental Variables
-        env:
-          IMAGE_NAME: buvanaa/spring-petclinic
-          IMAGE_TAG: 3.0
-        run:  |
-          echo "Image name: $IMAGE_NAME"
-          echo "Image tag: $IMAGE_TAG"
-
+        run: docker build -t $IMAGE_NAME:$IMAGE_TAG .
+        
