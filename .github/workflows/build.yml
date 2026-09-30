@@ -62,6 +62,6 @@ jobs:
       - name: Build Docker Image
         run: docker build -t $IMAGE_NAME:$IMAGE_TAG .
       - name: Test Condition
-        if: ${{ true }}
-        run: echo "Condition is True"
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: echo "We are running on the main branch"
         
