@@ -61,7 +61,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build Docker Image
         run: docker build -t $IMAGE_NAME:$IMAGE_TAG .
-      - name: Test Condition
-        if: ${{ github.ref == 'refs/heads/main' }}
-        run: echo "We are running on the main branch"
+      - name: First Step
+        run: echo "First step is running"
+      - name: Second step
+        if: ${{ success() }}
+        run: echo "Second step runs because of first step"
         
