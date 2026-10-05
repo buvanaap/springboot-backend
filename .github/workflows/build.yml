@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - '**'
+  workflow_dispatch:
+
 env:
   IMAGE_NAME: buvanaa/spring-petclinic
   IMAGE_TAG: 3.0
