@@ -61,9 +61,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build Docker Image
         run: docker build -t $IMAGE_NAME:$IMAGE_TAG .
-      - name: First Step
-        run: echo "First step is running"
-      - name: Second step
-        if: ${{ success() }}
-        run: echo "Second step runs because of first step"
+      - name: Create failure
+        run: exit 1
+      - name: Handle Failure
+        if: ${{ failure() }}
+        run: echo "A previous step failed"
         
