@@ -4,6 +4,12 @@ on:
     branches:
       - '**'
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Choose environment'
+        required: true
+        default: 'staging'
+
 
 env:
   IMAGE_NAME: buvanaa/spring-petclinic
@@ -20,6 +26,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Show Environment
+        run: echo "Environment is ${{ inputs.environment }}"
       - name: Build application
         run: mvn clean package
       - name: Upload JAR
