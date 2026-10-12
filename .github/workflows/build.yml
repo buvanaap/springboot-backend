@@ -79,9 +79,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build Docker Image
         run: docker build -t $IMAGE_NAME:$IMAGE_TAG .
-      - name: Create failure
-        run: exit 1
-      - name: Handle Failure
-        if: ${{ failure() }}
-        run: echo "A previous step failed"
+      - name: Github context
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch/Ref: ${{ github.ref }}"
+          echo "Triggered by: ${{ github.actor }}"
+          echo "Event: ${{ github.event_name }}"
         
