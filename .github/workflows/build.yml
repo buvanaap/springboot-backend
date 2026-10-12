@@ -86,3 +86,18 @@ jobs:
           echo "Triggered by: ${{ github.actor }}"
           echo "Event: ${{ github.event_name }}"
         
+  matrix-practice:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [17,21]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java-version }}
+      - name: Display Java Version
+        run: java -version
